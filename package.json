@@ -1,5 +1,5 @@
 {
-  "name": "todos-crud-contract",
+  "name": "ncdBookShopContract",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -19,11 +19,13 @@
   },
   "scripts": {
     "build:release": "asb",
-    "deploy": "near dev-deploy build/release/todos-crud-contract.wasm",
+    "deploy": "near dev-deploy build/release/ncdBookShopContract.wasm",
     "dev": "yarn build:release && yarn deploy",
     "test": "asp"
   },
   "devDependencies": {
     "assemblyscript": "^0.20.6"
-  }
+  },
+  "repository": "https://github.com/mrtlive/NCD-Bookshop-Example",
+  "author": "mrtlive <mrtlive1@gmail.com>"
 }

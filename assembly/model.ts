@@ -1,9 +1,9 @@
 // contract/assembly/model.ts
-import { PersistentUnorderedMap, math } from "near-sdk-as";
+import { PersistentUnorderedMap, math, PersistentVector } from "near-sdk-as";
 
 
 export const books = new PersistentUnorderedMap<u32, Books>("books");
-
+export const book = new PersistentUnorderedMap<string, Books>("book")
 
 
 @nearBindgen
@@ -25,6 +25,7 @@ export class Books {
   static createBook(book_name: string, author: string, price: u32, quantity: u32): Books {
     const book = new Books(book_name, author, price, quantity);
     books.set(book.id, book);
+
     return book;  
   }
   static findById(id: u32): Books {
